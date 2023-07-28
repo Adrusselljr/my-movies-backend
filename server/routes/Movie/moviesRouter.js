@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const { createMovie, getAllUsersMovies, getOneMovie, updateMovie, deleteMovie } = require('./controller/movieController')
-const { jwtMiddleware } = require('../lib/index')
+const { createMovie, getAllUsersMovies, getOneMovie, updateMovie, deleteMovie } = require('./controller/moviesController')
+const { jwtMiddleware } = require('../validator/lib/index')
 
 router.post('/create-movie', jwtMiddleware, createMovie)
 router.get('/get-all-user-movies', jwtMiddleware, getAllUsersMovies)

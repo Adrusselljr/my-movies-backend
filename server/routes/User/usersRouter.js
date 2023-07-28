@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const { createUser, getAllUsers, getCurrentUser, updateUser, deleteUser, userLogin, updatePassword } = require('./controller/userController')
-const { checkIsEmpty, validateCreate, validateUpdate, validateLogin, jwtMiddleware, validateUpdatePassword } = require('../lib/index')
+const { checkIsEmpty, validateCreate, validateUpdate, validateLogin, jwtMiddleware, validateUpdatePassword } = require('../validator/lib/index')
 
 router.post('/create-user', checkIsEmpty, validateCreate, createUser)
 router.get('/all-users', getAllUsers)
